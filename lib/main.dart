@@ -20,8 +20,16 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("This is AppBar")),
-      body: Text("This is Body"),
-    );
+        appBar: AppBar(title: Text("This is AppBar")),
+        body: Column(
+          children: <Widget>[TestWidget(), TestWidget(), TestWidget()],
+        ));
+  }
+}
+
+class TestWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text("Hello Body ");
   }
 }
